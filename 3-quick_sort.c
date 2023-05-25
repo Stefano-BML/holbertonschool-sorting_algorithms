@@ -12,7 +12,7 @@ void quick_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	quick_s(array, 0, size - 1, size);
+	quick_sos(array, 0, size - 1, size);
 }
 
 /**
@@ -53,7 +53,7 @@ int partition(int *array, int lo, int hi, size_t size)
 }
 
 /**
- * quick_s - quick sort
+ * quick_sos - quick sort
  * @array: given array
  * @lo: lower
  * @hi:higher
@@ -67,7 +67,7 @@ void quick_sos(int *array, int lo, int hi, size_t size)
 	if (lo < hi)
 	{
 		pivot = partition(array, lo, hi, size);
-		quick_s(array, lo, pivot - 1, size);
-		quick_s(array, pivot + 1, hi, size);
+		quick_sos(array, lo, pivot - 1, size);
+		quick_sos(array, pivot + 1, hi, size);
 	}
 }

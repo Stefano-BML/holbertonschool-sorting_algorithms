@@ -66,3 +66,15 @@ int lomuto_partition(int *array, int low, int high)
 
 	return (i + 1);
 }
+/**
+ * swap - Swaps two elements of an array.
+ *
+ * @a: Pointer to the first element.
+ * @b: Pointer to the second element.
+ */
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
